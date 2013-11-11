@@ -52,7 +52,7 @@ body {
   float: left;
 }
 .P-visitRouteViewContent .startPage {
-  width: 29%;
+  width: 28%;
   float: left;
   margin-right: 5px;
 }
@@ -83,6 +83,10 @@ body {
   text-align: right;
   background-color: #3db3b7;
   border-top: solid 2px #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
 }
 .P-visitRouteViewContent .box .ce {
   margin-right: 20px;
