@@ -96,7 +96,7 @@ AnalysisGraph.prototype = {
 	 * 比率格式化
 	 */
 	formatRate: function(rate){
-		return Math.round(rate*100*2)/2+'%';
+		return Math.round(rate*100)+'%';
 	},
 	reset: function(){
 		this.$wrap.empty();
