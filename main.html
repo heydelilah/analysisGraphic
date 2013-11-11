@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AnalysisGraphic</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<a id="generateBtn">Generate Graphic</a>
+	<div id="dom"></div>
+
+
+	<script src="libs/jquery-1.9.1.min.js"></script>
+	<script src="generateData.js"></script>
+	<script src="analysisGraphic.js"></script>
+	<script>
+	$(function(){
+		var dom = $("#dom");
+		var dataCenter = new DataCenter();
+		var data = dataCenter.generateData();
+		var graphCenter =new AnalysisGraph();
+		graphCenter.buildGraph(dom,data);
+
+
+		$("#generateBtn").click(function(){
+			var data = dataCenter.generateData();
+			graphCenter.reset().buildGraph(dom,data);
+		});
+	});
+	</script>
+</body>
+</html>
